@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    background-color: #000000;
+    width: 100%;
+    padding: 10px;
+}
+
+img {
+    height: 80px;
+    width: 80px;
+}
+
+.logo, .sociais{
+    width: 25%;
+}
+
+.menu {
+    width: 50%;
+}
+
+.menu nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding-right: 45px;
+    font-size: 20px;
+    position: relative;
+}
+
+.menu nav a::after {
+    content: " ";
+    width: 0;
+    height: 4px;
+    background-image: linear-gradient(45deg, #FF2500, #FF7100);
+    position: absolute;
+    top: 30px;
+    left: 0;
+    transition: width 0.5s;
+}
+
+.menu nav a:hover::after {
+    width: 30px;
+}
+
+.sociais button {
+    width: 40px;
+    height: 40px;
+    background-image: linear-gradient(45deg, #FF2500, #FF7100);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.sociais button i {
+    font-size: 22px;
+    color: #ffffff;
+}
+
+.cardapio {
+    padding: 40px 0;
+    background: #f9f9f9;
+    position: relative;
+}
+
+.cardapio h2.Cardap {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.cardapio-carousel {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.cardapio-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.cardapio-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    flex: 0 0 auto;
+    width: 215px;
+    margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cardapio-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.cardapio-details {
+    padding: 15px;
+    text-align: center;
+}
+
+.cardapio-details h3 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+}
+
+.cardapio-details p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Botões do carrossel */
+.carousel-btn {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
