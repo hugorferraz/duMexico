@@ -78,10 +78,12 @@ img {
     position: relative;
 }
 
-.cardapio h2.Cardap {
-    font-size: 2.5em;
+.cardapTitulo {
+    font-family:  
+    font-size: 30px;
     margin-bottom: 30px;
     text-align: center;
+    align-items: center;
 }
 
 .cardapio-carousel {
@@ -91,12 +93,15 @@ img {
     margin: 0 auto;
     width: 100%;
     display: flex;
+    align-items: center;
     justify-content: center;
+    padding: 0 60px; /* Espaço para os botões */
 }
 
 .cardapio-container {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    width: 100%;
 }
 
 .cardapio-item {
@@ -105,8 +110,8 @@ img {
     border-radius: 10px;
     overflow: hidden;
     flex: 0 0 auto;
-    width: 215px;
-    margin-right: 20px;
+    width: 230px;
+    margin: 0 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -131,29 +136,3 @@ img {
     color: #666;
 }
 
-/* Botões do carrossel */
-.carousel-btn {
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 10;
-}
-
-.carousel-btn.prev {
-    left: 10px;
-}
-
-.carousel-btn.next {
-    right: 10px;
-}
