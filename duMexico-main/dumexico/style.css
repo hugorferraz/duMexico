@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Titillium Web', sans-serif;
+    max-width: 100%;
 }
 
 .container {
@@ -39,7 +40,7 @@ img {
     text-decoration: none;
     padding-right: 45px;
     font-size: 20px;
-    position: relative;
+    position: flex;
 }
 
 .menu nav a::after {
@@ -57,26 +58,51 @@ img {
     width: 30px;
 }
 
-.sociais button {
+.sociais{
+    width: 50px;
+    height: 105px;
+    max-width: 100%;
+}
+    .sociaisbutton{
+    align-items: center;
+    text-align: center;
     width: 40px;
     height: 40px;
-    background-image: linear-gradient(45deg, #FF2500, #FF7100);
+    max-width: 100%;
+    padding: auto;
+    background-color: #FF2500; /* Cor de fundo do botão */
     border: none;
     border-radius: 8px;
     cursor: pointer;
     margin-right: 10px;
+    position: flex;
+    
+    
+}
+.sociaisbutton:hover {
+    background-color: #FF7100; /* Cor do botão ao passar o mouse */
 }
 
-.sociais button i {
-    font-size: 22px;
+.sociaisbuttoni {
+    align-items: center;
+    text-align: center;
+    width: 40px;
+    height: 40px;       
+    font-size: 25px;
     color: #ffffff;
+    max-width: 10%;
 }
+
+.home-image{
+    width: 100%;
+}
+
 
 /* Estilos para a seção "Sobre Nós" */
 #sobre-nos {
     padding: 40px 20px;
     background-color: #f4f4f4;
-    margin-top: 20px; /* Adiciona um espaço acima da seção */
+    /*margin-top: 20px; /* Adiciona um espaço acima da seção */
 }
 
 .sobre-nos .container {
