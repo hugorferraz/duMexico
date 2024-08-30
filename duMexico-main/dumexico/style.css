@@ -72,6 +72,47 @@ img {
     color: #ffffff;
 }
 
+/* Estilos para a seção "Sobre Nós" */
+#sobre-nos {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    margin-top: 20px; /* Adiciona um espaço acima da seção */
+}
+
+.sobre-nos .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilos para a imagem do chef */
+.imagem-chef img {
+    max-width: 100%;
+    height: auto;
+    width: 60%; /* Ajusta a largura da imagem */
+    object-fit: cover; /* Garante que a imagem preencha o contêiner sem distorção */
+}
+
+/* Estilos para o texto sobre o chef */
+.texto-chef {
+    width: 50%;
+    padding: 0 20px; /* Adiciona um pouco de espaço ao redor do texto */
+}
+
+.texto-chef h2 {
+    margin-top: 0;
+    font-size: 2em; /* Define um tamanho de fonte maior para o título */
+    color: #333; /* Cor do título */
+}
+
+.texto-chef p {
+    margin: 0 0 10px;
+    line-height: 1.6; /* Aumenta o espaçamento entre linhas para melhor legibilidade */
+    color: #555; /* Cor do texto */
+}
+
 .cardapio {
     padding: 40px 0;
     background: #f9f9f9;
@@ -79,7 +120,6 @@ img {
 }
 
 .cardapTitulo {
-    font-family:  
     font-size: 30px;
     margin-bottom: 30px;
     text-align: center;
@@ -134,5 +174,72 @@ img {
 .cardapio-details p {
     font-size: 0.9em;
     color: #666;
+}
+
+/* Estilos para a seção de feedback */
+#feedback {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    width: 100vw; /* Ocupa toda a largura da tela */
+    margin: 0; /* Remove margens para ocupar toda a largura */
+}
+
+.feedback .container {
+    max-width: 1200px; /* Define a largura máxima do formulário */
+    margin: 0 auto; /* Centraliza o contêiner */
+    padding: 20px;
+    background-color: #ffffff; /* Cor de fundo branca para o formulário */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feedbackClientes h2 {
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical; /* Permite redimensionar verticalmente apenas */
+}
+
+button {
+    background-color: #FF2500; /* Cor de fundo do botão */
+    color: #ffffff; /* Cor do texto do botão */
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #FF7100; /* Cor do botão ao passar o mouse */
 }
 

@@ -28,8 +28,20 @@
     </header>
 
     <main>
+        <section id="sobre-nos" class="sobre-nos">
+            <div class="container">
+                <div class="imagem-chef">
+                    <img src="image/chefDu.png" alt="Chef">
+                </div>
+                <div class="texto-chef">
+                    <h2>Sobre o Chef</h2>
+                    <p>O Chef [Nome] é um renomado profissional da culinária com uma paixão por criar pratos inovadores e deliciosos. Com anos de experiência em cozinhas de prestígio e uma dedicação inabalável à arte culinária, o Chef [Nome] traz uma abordagem única e criativa à gastronomia.</p>
+                    <p>Seu compromisso com a qualidade e a autenticidade dos ingredientes se reflete em cada prato, oferecendo aos clientes uma experiência gastronômica inesquecível.</p>
+                </div>
+            </div>
+        </section>
         <section id="cardapio" class="cardapio">
-            <div class="cardapTitulo"><h2>Cardápio</h2></div>
+            <div class="cardapTitulo"><h2>Principais Pratos</h2></div>
             <div class="container">
                 <div class="cardapio-carousel">
                     <div class="cardapio-container">
@@ -79,6 +91,26 @@
                     <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
                     <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
                 </div>
+            </div>
+        </section>
+        <section id="feedback" class="feedback">
+            <div class="feedbackClientes"><h2>Feedback dos Clientes</h2></div>
+            <div class="container">git
+                <form action="submit_feedback.php" method="POST">
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Email:</label>
+                        <input type="email" id="telefone" name="telefone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="comentario">Comentário:</label>
+                        <textarea id="comentario" name="comentario" rows="4" required></textarea>
+                    </div>
+                    <button type="submit">Enviar Feedback</button>
+                </form>
             </div>
         </section>
     </main>
