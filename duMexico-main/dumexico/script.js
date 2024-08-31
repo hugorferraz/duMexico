@@ -1,5 +1,3 @@
-// script.js
-
 let currentIndex = 0;
 const items = document.querySelectorAll('.cardapio-item');
 const totalItems = items.length;
@@ -10,13 +8,11 @@ const visibleItems = 3; // Número de itens visíveis ao mesmo tempo
 
 // Duplicar os itens para criar um loop contínuo
 function duplicateItems() {
-    // Clonar itens para o final do contêiner
     items.forEach(item => {
-        container.appendChild(item.cloneNode(true));
+        container.appendChild(item.cloneNode(true)); // Clonar itens para o final do contêiner
     });
-    // Clonar itens para o início do contêiner
     for (let i = 0; i < totalItems; i++) {
-        container.prepend(container.lastElementChild.cloneNode(true));
+        container.prepend(container.lastElementChild.cloneNode(true)); // Clonar itens para o início do contêiner
     }
 }
 
@@ -30,7 +26,7 @@ function adjustContainerWidth() {
 function initCarousel() {
     duplicateItems();
     adjustContainerWidth();
-    moveToIndex(currentIndex);
+    container.style.transform = `translateX(-${(itemWidth + spacing) * totalItems}px)`; // Posicionar inicialmente
 }
 
 // Mover para o índice desejado
@@ -48,10 +44,10 @@ function startCarousel() {
         if (currentIndex >= moveDistance) {
             // Ajusta a transição para criar um efeito contínuo
             container.style.transition = 'none'; // Desabilita a transição para reposicionar instantaneamente
-            container.style.transform = `translateX(0)`;
+            container.style.transform = `translateX(-${(itemWidth + spacing) * totalItems}px)`; // Reposiciona para o início do loop
+            currentIndex = visibleItems; // Move o índice para o início dos itens visíveis
             setTimeout(() => {
                 container.style.transition = `transform 0.5s ease-in-out`; // Reabilita a transição
-                currentIndex = visibleItems; // Move o índice para o início dos itens visíveis
                 moveToIndex(currentIndex); // Move para o próximo item
             }, 50);
         } else {
@@ -65,3 +61,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initCarousel();
     startCarousel();
 });
+
+
